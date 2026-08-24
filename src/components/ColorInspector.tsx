@@ -76,12 +76,12 @@ export default function ColorInspector({ color, label, borderColor }: Props) {
           aria-label={`${label} color values`}
           className="absolute z-50 top-full left-1/2 -translate-x-1/2 mt-2 p-3 rounded-lg shadow-xl"
           style={{
-            backgroundColor: 'var(--bg, #1a1d14)',
-            border: '1px solid var(--bg1, #2a2d20)',
+            backgroundColor: 'var(--bg)',
+            border: '1px solid var(--border)',
             minWidth: '180px',
           }}
         >
-          <div className="text-xs font-semibold mb-2 opacity-60" style={{ color: 'var(--fg, #dce0d9)' }}>
+          <div className="text-xs font-semibold mb-2 opacity-60" style={{ color: 'var(--tx)' }}>
             {label}
           </div>
           
@@ -90,15 +90,15 @@ export default function ColorInspector({ color, label, borderColor }: Props) {
               key={type}
               onClick={() => copyToClipboard(value, type)}
               className="w-full flex items-center justify-between gap-2 px-2 py-1.5 rounded text-left hover:bg-white/5 transition-colors"
-              style={{ color: 'var(--fg, #dce0d9)' }}
+              style={{ color: 'var(--tx)' }}
             >
               <span className="text-[10px] font-mono opacity-50">{fmtLabel}</span>
               <span className="text-xs font-mono">{copied === type ? 'Copied!' : value}</span>
             </button>
           ))}
           
-          <div className="mt-2 pt-2 border-t opacity-30" style={{ borderColor: 'var(--fg, #dce0d9)' }}>
-            <div className="text-[10px] font-mono text-center opacity-50" style={{ color: 'var(--fg, #dce0d9)' }}>
+          <div className="mt-2 pt-2 border-t opacity-30" style={{ borderColor: 'var(--tx)' }}>
+            <div className="text-[10px] font-mono text-center opacity-50" style={{ color: 'var(--tx)' }}>
               Click to copy
             </div>
           </div>

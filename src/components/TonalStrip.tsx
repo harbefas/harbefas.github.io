@@ -17,7 +17,7 @@ export default function TonalStrip({ baseColor, label, steps = 9 }: Props) {
 
   return (
     <div className="flex flex-col gap-2">
-      <span className="text-xs font-mono" style={{ color: '#7a8573' }}>{label}</span>
+      <span className="text-xs font-mono" style={{ color: 'var(--tx-3)' }}>{label}</span>
       <div className="flex rounded-lg overflow-hidden h-8">
         {tones.map((tone, i) => (
           <div
@@ -25,7 +25,9 @@ export default function TonalStrip({ baseColor, label, steps = 9 }: Props) {
             className="flex-1 flex items-center justify-center text-[8px] font-mono"
             style={{
               backgroundColor: tone,
-              color: i < steps / 2 ? '#dce0d9' : '#1c1e13',
+              // Ink is picked from the tone's own lightness, not from the active theme:
+              // the strip paints both ends of the ramp at once.
+              color: i < steps / 2 ? 'var(--neutral-text-dark)' : 'var(--olive-bg)',
             }}
           >
             {Math.round(10 + (i * 80 / (steps - 1)))}

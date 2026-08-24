@@ -88,9 +88,9 @@ export default function CodeWindow({ theme }: Props) {
         className="flex items-center gap-2 px-4 py-3"
         style={{ backgroundColor: theme.bg1 }}
       >
-        <span className="w-3 h-3 rounded-full bg-[#ff5f57]" />
-        <span className="w-3 h-3 rounded-full bg-[#ffbd2e]" />
-        <span className="w-3 h-3 rounded-full bg-[#28c840]" />
+        <span className="w-3 h-3 rounded-full" style={{ backgroundColor: 'var(--red)' }} />
+        <span className="w-3 h-3 rounded-full" style={{ backgroundColor: 'var(--yellow)' }} />
+        <span className="w-3 h-3 rounded-full" style={{ backgroundColor: 'var(--green)' }} />
         <span
           className="ml-3 text-xs font-mono"
           style={{ color: theme.comment }}

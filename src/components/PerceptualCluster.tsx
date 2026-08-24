@@ -36,8 +36,6 @@ export default function PerceptualCluster({ theme, showLabValues = false }: Prop
   const scaleX = (a: number) => padding + ((a + 128) / 256) * (viewBoxWidth - 2 * padding)
   const scaleY = (b: number) => padding + ((128 - b) / 256) * (viewBoxHeight - 2 * padding)
 
-  const isDark = theme.name === 'yerba-mate'
-
   return (
     <div className="flex flex-col gap-4">
       <div
@@ -88,7 +86,7 @@ export default function PerceptualCluster({ theme, showLabValues = false }: Prop
                 cy={scaleY(color.b)}
                 r="6"
                 fill={color.hex}
-                stroke={isDark ? '#ffffff30' : '#00000030'}
+                stroke="var(--border-2)"
                 strokeWidth="1"
               />
               <text

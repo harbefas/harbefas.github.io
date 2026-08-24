@@ -24,7 +24,7 @@ export default function ThemeToggle({ onThemeChange, currentTheme }: Props) {
       onClick={handleToggle}
       className="relative w-14 h-8 rounded-full transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-offset-2"
       style={{
-        backgroundColor: isDark ? '#282d1c' : '#ebdfb0',
+        backgroundColor: isDark ? 'var(--olive-bg)' : 'var(--cream-bg-2)',
         boxShadow: isAnimating ? `0 0 20px ${currentTheme.accent}60` : 'none',
       }}
       aria-label={`Switch to ${nextTheme.label}`}
@@ -41,7 +41,7 @@ export default function ThemeToggle({ onThemeChange, currentTheme }: Props) {
           viewBox="0 0 24 24"
           className="w-4 h-4 transition-all duration-300"
           style={{
-            color: isDark ? '#1c1e13' : '#fbf1c7',
+            color: isDark ? 'var(--olive-bg)' : 'var(--cream-bg)',
             transform: isDark ? 'rotate(0deg)' : 'rotate(180deg)',
           }}
           fill="currentColor"

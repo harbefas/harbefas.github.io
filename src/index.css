@@ -1,3 +1,5 @@
+@import './styles/mate-tokens.css';
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -8,11 +10,18 @@ html {
 
 body {
   margin: 0;
-  background-color: #181b14;
-  color: #d4dbd0;
-  font-family: 'Inter', ui-sans-serif, system-ui, sans-serif;
+  background-color: var(--bg);
+  color: var(--tx);
+  font-family: var(--font-sans);
   -webkit-font-smoothing: antialiased;
-  transition: background-color 0.5s ease, color 0.5s ease;
+  transition: background-color var(--duration-settle) var(--ease-standard),
+    color var(--duration-settle) var(--ease-standard);
+}
+
+/* §3: EB Garamond is the reading face, headlines included. */
+h1, h2, h3, h4 {
+  font-family: var(--font-serif);
+  letter-spacing: var(--tracking-headline);
 }
 
 #root {

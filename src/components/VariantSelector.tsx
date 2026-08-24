@@ -41,11 +41,7 @@ export default function VariantSelector({ themes, activeTheme, onSelect }: Props
             <span
               className="text-xs font-mono font-medium transition-colors duration-200"
               style={{
-                color: isActive
-                  ? theme.fg
-                  : isDark
-                    ? '#7a8573'
-                    : '#928374',
+                color: isActive ? theme.fg : 'var(--tx-3)',
               }}
             >
               {theme.label}
@@ -54,8 +50,8 @@ export default function VariantSelector({ themes, activeTheme, onSelect }: Props
             <span
               className="text-[10px] px-1.5 py-0.5 rounded font-mono"
               style={{
-                backgroundColor: isDark ? '#282d1c' : '#ebdfb0',
-                color: isDark ? '#a67c52' : '#b57614',
+                backgroundColor: isDark ? 'var(--olive-bg)' : 'var(--cream-bg-2)',
+                color: isDark ? 'var(--hue-yellow-dark)' : 'var(--hue-yellow-light)',
                 opacity: isActive ? 1 : 0.6,
               }}
             >

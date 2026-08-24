@@ -15,16 +15,16 @@ export default function ContrastBadge({ foreground, background, size = 'sm' }: P
     ? 'text-[10px] px-1.5 py-0.5' 
     : 'text-xs px-2 py-1'
 
-  const bgColor = passes ? 'rgba(34, 197, 94, 0.15)' : 'rgba(239, 68, 68, 0.15)'
-  const textColor = passes ? '#22c55e' : '#ef4444'
-  const borderColor = passes ? 'rgba(34, 197, 94, 0.3)' : 'rgba(239, 68, 68, 0.3)'
+  const hue = passes ? 'var(--green)' : 'var(--red)'
+  const bgColor = `color-mix(in srgb, ${hue} 15%, transparent)`
+  const borderColor = `color-mix(in srgb, ${hue} 30%, transparent)`
 
   return (
     <span
       className={`inline-flex items-center gap-1 rounded font-mono font-medium ${sizeClasses}`}
       style={{
         backgroundColor: bgColor,
-        color: textColor,
+        color: hue,
         border: `1px solid ${borderColor}`,
       }}
     >

@@ -68,7 +68,7 @@ export default function Palette() {
   return (
     <section ref={ref} id="palette" className="reveal w-full py-16 px-4" style={{ backgroundColor: theme.bg1 }}>
       <div className="max-w-5xl mx-auto flex flex-col gap-8">
-        <h2 className="text-2xl font-semibold tracking-tight text-center" style={{ color: '#dce0d9' }}>
+        <h2 className="text-2xl font-semibold tracking-tight text-center" style={{ color: 'var(--tx)' }}>
           Palette
         </h2>
 

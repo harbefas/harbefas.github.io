@@ -24,13 +24,10 @@ export function ThemeProvider({ children }: Props) {
   const isDark = theme.name === 'yerba-mate'
 
   useEffect(() => {
-    document.body.style.backgroundColor = theme.bg
-    document.body.style.color = theme.fg
-    
-    document.body.style.setProperty('--bg', theme.bg)
-    document.body.style.setProperty('--bg1', theme.bg1)
-    document.body.style.setProperty('--fg', theme.fg)
-  }, [theme])
+    // Tokens live in [data-theme] blocks (mate-tokens.css); the theme switch is
+    // that attribute and nothing else. No color is written from JS.
+    document.documentElement.dataset.theme = isDark ? 'dark' : 'light'
+  }, [isDark])
 
   return (
     <ThemeContext.Provider value={{
