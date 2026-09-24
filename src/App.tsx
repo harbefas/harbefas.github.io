@@ -5,6 +5,7 @@ import Hero from './components/Hero'
 import Manifesto from './components/Manifesto'
 import Projects from './components/Projects'
 import Upstream from './components/Upstream'
+import LearnTeaser from './components/LearnTeaser'
 import Contribute from './components/Contribute'
 import Footer from './components/Footer'
 
@@ -18,6 +19,7 @@ function App() {
         <Manifesto />
         <Projects />
         <Upstream />
+        <LearnTeaser />
         <Contribute />
         <Footer />
       </div>
