@@ -4,7 +4,7 @@ import { useTheme } from '../context/ThemeContext'
 const PRINCIPLES = [
   {
     title: 'One job, done in the open',
-    body: 'Small programs with a single responsibility, readable in an afternoon, licensed MIT. Nothing here needs a plan tier, an account or a phone number, and nothing here stops working when a company pivots.',
+    body: 'Small programs with a single responsibility, readable in an afternoon, and copyleft where it counts. Nothing here needs a plan tier, an account or a phone number, and nothing here stops working when a company pivots.',
   },
   {
     title: 'The shape is UNIX',

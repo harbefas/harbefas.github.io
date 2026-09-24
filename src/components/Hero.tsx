@@ -40,7 +40,7 @@ export default function Hero() {
       </p>
 
       <div className="flex gap-3 mb-8 relative z-10">
-        {['UNIX-shaped', 'keyboard-first', 'self-hosted', 'MIT'].map((tag) => (
+        {['UNIX-shaped', 'keyboard-first', 'self-hosted', 'copyleft'].map((tag) => (
           <span
             key={tag}
             className="hidden sm:inline text-xs font-mono px-3 py-1 rounded-full"

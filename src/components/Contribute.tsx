@@ -8,7 +8,7 @@ const WAYS = [
   },
   {
     title: 'Send a patch here',
-    body: 'Rust, Python, Lua, JavaScript, shell. Small pull requests, MIT throughout, no CLA to sign.',
+    body: 'Rust, Python, Lua, JavaScript, shell. Small pull requests, no CLA to sign. Each repo states its licence.',
   },
   {
     title: 'Send one upstream',

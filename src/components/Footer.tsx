@@ -33,7 +33,7 @@ export default function Footer() {
         <div className="flex items-center gap-4 text-xs" style={{ color: theme.comment }}>
           <span>Harbefas</span>
           <span>&middot;</span>
-          <span>MIT licensed</span>
+          <span>AGPL-3.0 · GPL-3.0 · MIT</span>
           <span>&middot;</span>
           <span>Built by Nicholas Velten</span>
         </div>
