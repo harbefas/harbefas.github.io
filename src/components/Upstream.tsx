@@ -73,7 +73,10 @@ export default function Upstream() {
               >
                 {u.name}
               </a>
-              <span style={{ color: theme.comment }}> &mdash; {u.what}</span>
+              <span style={{ color: theme.comment }}>
+                {' '}&mdash; {u.what}
+                {u.prs > 1 && ` (${u.prs} PRs)`}
+              </span>
             </li>
           ))}
         </ul>

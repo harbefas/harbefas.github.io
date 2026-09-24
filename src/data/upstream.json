@@ -1,0 +1,88 @@
+{
+  "source": "https://nicholas-velten.xyz/api/resume.json",
+  "counts": {
+    "merged": 19,
+    "open": 15,
+    "projects": 13
+  },
+  "upstream": [
+    {
+      "name": "lichess",
+      "repo": "lichess-org/lila",
+      "what": "Study comments keep their authors through a PGN export and import, so comments from different people on the same move no longer merge into one.",
+      "prs": 1
+    },
+    {
+      "name": "rclone",
+      "repo": "rclone/rclone",
+      "what": "touch --timestamp parses the documented layouts explicitly instead of guessing from input length, adding the dotted, date-only and RFC3339 forms.",
+      "prs": 1
+    },
+    {
+      "name": "lnav",
+      "repo": "tstack/lnav",
+      "what": "Restores the second G/End press jumping back to the top, which only ever worked in non-selectable views.",
+      "prs": 1
+    },
+    {
+      "name": "Transmission",
+      "repo": "transmission/transmission",
+      "what": "Collapsed is_martian_addr() into is_valid_for_peers(), backed by a characterization test.",
+      "prs": 1
+    },
+    {
+      "name": "Cataclysm: Bright Nights",
+      "repo": "cataclysmbn/Cataclysm-BN",
+      "what": "Three merged commits fixing reload, unload, and deactivation logic for charge-untracked monster ammo/hacks, validated with regression tests and manual save/load scenarios.",
+      "prs": 2
+    },
+    {
+      "name": "rdrview",
+      "repo": "eafer/rdrview",
+      "what": "Version guard for CURLOPT_PROTOCOLS_STR.",
+      "prs": 1
+    },
+    {
+      "name": "TorrServer",
+      "repo": "YouROK/TorrServer",
+      "what": "Returns a JSON error body when /torrents rejects a request.",
+      "prs": 1
+    },
+    {
+      "name": "usage",
+      "repo": "jdx/usage",
+      "what": "Fixes completion of values in --flag=value style flags.",
+      "prs": 1
+    },
+    {
+      "name": "cliamp",
+      "repo": "bjarneo/cliamp",
+      "what": "Adds the option to hide the keybinding hints bar.",
+      "prs": 1
+    },
+    {
+      "name": "Shelfmark",
+      "repo": "calibrain/shelfmark",
+      "what": "Limits search_author's credit list to the first name.",
+      "prs": 3
+    },
+    {
+      "name": "tuicr",
+      "repo": "agavra/tuicr",
+      "what": "Fixes help alignment in Comment mode.",
+      "prs": 4
+    },
+    {
+      "name": "retransmission",
+      "repo": "retransmission/retransmission",
+      "what": "Cherry-pick of Transmission PR #9096, opened and merged by the maintainer.",
+      "prs": 1
+    },
+    {
+      "name": "Corosolto",
+      "repo": "corosolto/client",
+      "what": "Replaces the phantom local issues-bot action in CI with the real steps. Opened as #490, reopened and merged by the maintainer as #500.",
+      "prs": 1
+    }
+  ]
+}
