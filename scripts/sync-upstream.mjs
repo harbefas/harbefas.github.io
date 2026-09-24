@@ -1,8 +1,11 @@
 // Refresh src/data/upstream.json from the one list that is maintained by hand.
 //
 // The upstream PRs live in the personal site (site/src/data/portfolio.js),
-// published at nicholas-velten.xyz/api/resume.json with written descriptions.
-// This site used to keep its own copy; the two drifted. Now it only reads.
+// generated into public/api/resume.json with written descriptions. This site
+// used to keep its own copy; the two drifted. Now it only reads.
+//
+// Read from the repo, not nicholas-velten.xyz: Cloudflare answers 403 to the
+// GitHub runner, and the committed file does not wait for a deploy.
 //
 // The open-PR count comes from GitHub, because nobody maintains it by hand.
 // Every failure keeps the committed file: a flaky network never breaks a deploy.
@@ -12,7 +15,7 @@
 // check only ever adds a warning, never removes anything.
 import { readFileSync, writeFileSync } from 'node:fs';
 
-const RESUME = 'https://nicholas-velten.xyz/api/resume.json';
+const RESUME = 'https://raw.githubusercontent.com/nfvelten/site/main/public/api/resume.json';
 const AUTHOR = 'nfvelten';
 const OWN = ['nfvelten', 'harbefas'];
 const OUT = new URL('../src/data/upstream.json', import.meta.url);
@@ -29,30 +32,30 @@ async function github(q) {
   return res.json();
 }
 
-let resume;
+let contributions = null;
+let upstream = previous.upstream;
 try {
   const res = await fetch(RESUME);
   if (!res.ok) throw new Error(`${RESUME} ${res.status}`);
-  resume = await res.json();
+  contributions = (await res.json()).contributions;
+  upstream = contributions.map((c) => ({
+    name: c.project,
+    repo: c.repo,
+    what: c.prs[0].description,
+    prs: c.prs.length,
+  }));
 } catch (err) {
   console.warn(`sync-upstream: ${err.message}; keeping the committed list`);
-  process.exit(0);
 }
-
-const contributions = resume.contributions;
-const upstream = contributions.map((c) => ({
-  name: c.project,
-  repo: c.repo,
-  what: c.prs[0].description,
-  prs: c.prs.length,
-}));
 
 let open = previous.counts.open;
 try {
   open = (await github('is:open')).total_count;
-  const listed = new Set(contributions.flatMap((c) => c.prs.map((p) => p.href)));
-  for (const pr of (await github('is:merged')).items) {
-    if (!listed.has(pr.html_url)) console.warn(`sync-upstream: merged but not listed: ${pr.html_url}`);
+  if (contributions) {
+    const listed = new Set(contributions.flatMap((c) => c.prs.map((p) => p.href)));
+    for (const pr of (await github('is:merged')).items) {
+      if (!listed.has(pr.html_url)) console.warn(`sync-upstream: merged but not listed: ${pr.html_url}`);
+    }
   }
 } catch (err) {
   console.warn(`sync-upstream: ${err.message}; keeping open count ${open}`);

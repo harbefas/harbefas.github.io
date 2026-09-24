@@ -1,5 +1,5 @@
 {
-  "source": "https://nicholas-velten.xyz/api/resume.json",
+  "source": "https://raw.githubusercontent.com/nfvelten/site/main/public/api/resume.json",
   "counts": {
     "merged": 19,
     "open": 15,
