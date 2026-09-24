@@ -1,10 +1,9 @@
 import { ThemeProvider } from './context/ThemeContext'
 import ScrollProgress from './components/ScrollProgress'
 import Hero from './components/Hero'
-import CodeDuo from './components/CodeDuo'
-import Palette from './components/Palette'
-import Stats from './components/Stats'
-import Install from './components/Install'
+import Manifesto from './components/Manifesto'
+import Projects from './components/Projects'
+import Contribute from './components/Contribute'
 import Footer from './components/Footer'
 
 function App() {
@@ -13,10 +12,9 @@ function App() {
       <ScrollProgress />
       <div className="flex flex-col items-center">
         <Hero />
-        <CodeDuo />
-        <Palette />
-        <Stats />
-        <Install />
+        <Manifesto />
+        <Projects />
+        <Contribute />
         <Footer />
       </div>
     </ThemeProvider>

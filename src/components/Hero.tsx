@@ -1,12 +1,11 @@
 import ThemeToggle from './ThemeToggle'
 import { useTheme } from '../context/ThemeContext'
-import VaporEffect from './VaporEffect'
 
 export default function Hero() {
   const { theme, setTheme, isDark } = useTheme()
 
   return (
-    <section className="relative flex flex-col items-center pt-24 pb-10 px-4 text-center overflow-hidden">
+    <section className="relative flex flex-col items-center pt-24 pb-16 px-4 text-center overflow-hidden">
       <div
         className="pointer-events-none absolute -inset-20"
         style={{
@@ -21,44 +20,35 @@ export default function Hero() {
         }}
       />
 
-      <div className="relative">
-        <img
-          src="/logo.png"
-          alt="Mate Creations"
-          className="w-20 h-20 mb-6 relative z-10 transition-transform duration-300 hover:scale-110 hover:rotate-3"
-        />
-        <VaporEffect />
-      </div>
+      <img
+        src="/mark.svg"
+        alt=""
+        className="w-16 h-16 mb-6 relative z-10 transition-transform duration-300 hover:scale-110"
+      />
 
-      <h1 className="text-5xl font-bold tracking-tight mb-3 relative z-10" style={{ color: theme.fg }}>
-        Mate Creations
+      <h1 className="text-5xl sm:text-6xl font-bold tracking-tight mb-4 relative z-10" style={{ color: theme.fg }}>
+        Harbefas
       </h1>
 
-      <p className="text-lg mb-8 relative z-10" style={{ color: theme.comment }}>
-        Two themes. Dark and light.
+      <p className="max-w-xl text-lg mb-3 relative z-10" style={{ color: theme.fg }}>
+        Open-source replacements for tools that should never have been rented.
       </p>
 
-      <div className="flex gap-3 mb-6 relative z-10">
-        <span
-          className="text-sm font-mono px-3 py-1 rounded-full transition-all duration-200 hover:scale-105"
-          style={{
-            backgroundColor: isDark ? theme.bg1 : theme.accent,
-            color: isDark ? theme.accent : theme.bg,
-            border: `1px solid ${isDark ? theme.bg1 : theme.accent}`,
-          }}
-        >
-          yerba-mate
-        </span>
-        <span
-          className="text-sm font-mono px-3 py-1 rounded-full transition-all duration-200 hover:scale-105"
-          style={{
-            backgroundColor: isDark ? theme.accent : theme.bg1,
-            color: isDark ? theme.bg : theme.fg,
-            border: `1px solid ${isDark ? theme.accent : theme.bg1}`,
-          }}
-        >
-          terere
-        </span>
+      <p className="max-w-xl text-sm mb-8 relative z-10" style={{ color: theme.comment }}>
+        Reading, media, the browser, the desktop, the agents that touch your production systems.
+        Terminal-first, keyboard-driven, no account required.
+      </p>
+
+      <div className="flex gap-3 mb-8 relative z-10">
+        {['UNIX-shaped', 'keyboard-first', 'self-hosted', 'MIT'].map((tag) => (
+          <span
+            key={tag}
+            className="hidden sm:inline text-xs font-mono px-3 py-1 rounded-full"
+            style={{ color: theme.comment, border: `1px solid ${theme.bg1}` }}
+          >
+            {tag}
+          </span>
+        ))}
       </div>
 
       <div className="relative z-10">
@@ -67,22 +57,18 @@ export default function Hero() {
 
       <div className="flex gap-4 mt-10 relative z-10">
         <a
-          href="#install"
+          href="#projects"
           className="px-5 py-2.5 rounded-lg text-sm font-medium transition-all duration-200 hover:scale-105 hover:shadow-lg"
           style={{ backgroundColor: theme.accent, color: theme.bg, boxShadow: `0 4px 20px ${theme.accent}40` }}
         >
-          Install
+          Projects
         </a>
         <a
-          href="https://github.com/mateCreations"
+          href="https://github.com/harbefas"
           target="_blank"
           rel="noopener noreferrer"
           className="px-5 py-2.5 rounded-lg text-sm font-medium transition-all duration-200 hover:scale-105"
-          style={{
-            backgroundColor: theme.bg1,
-            color: theme.fg,
-            border: `1px solid ${theme.bg1}`,
-          }}
+          style={{ border: `1px solid ${theme.bg1}`, color: theme.fg }}
         >
           GitHub
         </a>

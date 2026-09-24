@@ -1,52 +1,41 @@
 import { useTheme } from '../context/ThemeContext'
 
-const REPOS = [
-  { label: 'Neovim', href: 'https://github.com/mateCreations/yerba-mate.nvim' },
-  { label: 'VS Code', href: 'https://github.com/mateCreations/vscode-yerba-mate' },
-  { label: 'Obsidian', href: 'https://github.com/mateCreations/obsidian-yerba-mate' },
-  { label: 'Omarchy', href: 'https://github.com/mateCreations/omarchy-yerba-mate' },
-  { label: 'Zen Browser', href: 'https://github.com/mateCreations/zen-yerba-mate' },
-  { label: 'LibreWolf', href: 'https://github.com/mateCreations/librewolf-yerba-mate' },
+const LINKS = [
+  { label: 'GitHub', href: 'https://github.com/harbefas' },
+  { label: 'Arbitus', href: 'https://arbitus-gateway.xyz' },
+  { label: 'Mate Creations', href: 'https://harbefas.github.io/matecreations-site/' },
+  { label: 'nicholas-velten.xyz', href: 'https://nicholas-velten.xyz' },
 ]
 
 export default function Footer() {
   const { theme } = useTheme()
 
   return (
-    <footer
-      className="w-full py-12 px-4 mt-8"
-      style={{ borderTop: `1px solid ${theme.bg1}` }}
-    >
+    <footer className="w-full py-12 px-4" style={{ borderTop: `1px solid ${theme.bg1}` }}>
       <div className="max-w-4xl mx-auto flex flex-col items-center gap-6">
-        <img src="/logo.png" alt="Mate Creations" className="w-8 h-8 opacity-60" />
+        <img src="/mark.svg" alt="" className="w-8 h-8 opacity-60" />
 
         <div className="flex flex-wrap gap-x-6 gap-y-2 justify-center">
-          {REPOS.map((r) => (
+          {LINKS.map((l) => (
             <a
-              key={r.label}
-              href={r.href}
+              key={l.label}
+              href={l.href}
               target="_blank"
               rel="noopener noreferrer"
-              className="text-sm transition-colors hover:opacity-100"
+              className="text-sm transition-opacity hover:opacity-70"
               style={{ color: theme.comment }}
             >
-              {r.label}
+              {l.label}
             </a>
           ))}
         </div>
 
         <div className="flex items-center gap-4 text-xs" style={{ color: theme.comment }}>
-          <a
-            href="https://github.com/mateCreations"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="hover:opacity-80 transition-opacity"
-            style={{ color: theme.comment }}
-          >
-            github.com/mateCreations
-          </a>
-          <span>·</span>
-          <span>MIT License</span>
+          <span>Harbefas</span>
+          <span>&middot;</span>
+          <span>MIT licensed</span>
+          <span>&middot;</span>
+          <span>Built by Nicholas Velten</span>
         </div>
       </div>
     </footer>

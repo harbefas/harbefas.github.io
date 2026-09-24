@@ -23,7 +23,7 @@ export interface ThemeColors {
  * by `npm run sync:tokens`. This file only maps the site's syntax vocabulary
  * onto semantic tokens; see ./PHILOSOPHY.md and mateCreations/DESIGN.md §2.
  *
- * Syntax roles follow the editor themes (the omarchy themes' colors.toml): keywords are
+ * Syntax roles follow the editor themes (the editor themes' colors.toml): keywords are
  * ocre, functions blue, strings mate green, types rose. Two deliberate
  * divergences, because the site paints UI and not a buffer:
  *  - `comment` is --tx-3, not the editor's moss --border: the site also uses it
