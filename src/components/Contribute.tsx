@@ -25,7 +25,6 @@ export default function Contribute() {
       ref={ref}
       id="contribute"
       className="reveal w-full py-20 px-4"
-      style={{ backgroundColor: theme.bg1 }}
     >
       <div className="max-w-3xl mx-auto">
         <p className="text-xs font-mono tracking-widest uppercase mb-4" style={{ color: theme.accent }}>
@@ -51,7 +50,7 @@ export default function Contribute() {
 
         <div
           className="rounded-lg overflow-hidden font-mono text-sm"
-          style={{ backgroundColor: theme.bg, border: `1px solid ${theme.bg1}` }}
+          style={{ backgroundColor: theme.bg1, border: `1px solid ${theme.bg1}` }}
         >
           <div className="flex gap-1.5 px-4 py-2.5" style={{ borderBottom: `1px solid ${theme.bg1}` }}>
             <span className="w-2.5 h-2.5 rounded-full" style={{ backgroundColor: theme.number }} />

@@ -13,7 +13,7 @@ export default function Footer() {
   return (
     <footer className="w-full py-12 px-4" style={{ borderTop: `1px solid ${theme.bg1}` }}>
       <div className="max-w-4xl mx-auto flex flex-col items-center gap-6">
-        <img src="/mark.svg" alt="" className="w-8 h-8 opacity-60" />
+        <img src="/logo.png" alt="" className="w-8 h-8 rounded-lg opacity-60" />
 
         <div className="flex flex-wrap gap-x-6 gap-y-2 justify-center">
           {LINKS.map((l) => (

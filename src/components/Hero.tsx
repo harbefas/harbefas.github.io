@@ -21,9 +21,9 @@ export default function Hero() {
       />
 
       <img
-        src="/mark.svg"
+        src="/logo.png"
         alt=""
-        className="w-16 h-16 mb-6 relative z-10 transition-transform duration-300 hover:scale-110"
+        className="w-20 h-20 mb-6 rounded-2xl relative z-10 transition-transform duration-300 hover:scale-110"
       />
 
       <h1 className="text-5xl sm:text-6xl font-bold tracking-tight mb-4 relative z-10" style={{ color: theme.fg }}>
