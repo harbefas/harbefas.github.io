@@ -176,6 +176,14 @@ export default function Finder() {
 
   return (
     <div className="w-full max-w-4xl mx-auto px-4 py-20">
+      <a
+        href="/"
+        className="inline-block text-xs font-mono mb-6 transition-opacity hover:opacity-70"
+        style={{ color: theme.comment }}
+      >
+        &larr; Harbefas
+      </a>
+
       <p className="text-xs font-mono tracking-widest uppercase mb-4" style={{ color: theme.accent }}>
         Find something to fix
       </p>

@@ -35,6 +35,19 @@ export default function Upstream() {
           and never becomes a repository here.
         </p>
 
+        <p className="max-w-2xl text-base leading-relaxed mb-10">
+          <a
+            href="/find/"
+            className="underline underline-offset-4 transition-opacity hover:opacity-70"
+            style={{ color: theme.accent }}
+          >
+            Find one yourself
+          </a>
+          <span style={{ color: theme.operator }}>
+            {' '}&mdash; unclaimed issues in projects that still merge outside work.
+          </span>
+        </p>
+
         <div className="flex gap-10 mb-12">
           {stats.map((s) => (
             <div key={s.label} className="flex flex-col">

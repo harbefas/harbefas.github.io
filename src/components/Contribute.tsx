@@ -48,6 +48,26 @@ export default function Contribute() {
           ))}
         </div>
 
+        <a
+          href="/find/"
+          className="hover-lift flex items-center justify-between gap-6 rounded-lg p-5 mb-6"
+          style={{ backgroundColor: theme.bg1, border: `1px solid ${theme.accent}40` }}
+        >
+          <div>
+            <h3 className="text-base font-semibold mb-1" style={{ color: theme.accent }}>
+              Don&rsquo;t know where to start?
+            </h3>
+            <p className="text-sm leading-relaxed" style={{ color: theme.comment }}>
+              A list of issues nobody has claimed, in projects that still merge outside work,
+              scored on what the fix is worth &mdash; and labelled with what each project asks of
+              AI-assisted contributors.
+            </p>
+          </div>
+          <span className="text-2xl shrink-0" style={{ color: theme.accent }} aria-hidden>
+            &rarr;
+          </span>
+        </a>
+
         <div
           className="rounded-lg overflow-hidden font-mono text-sm"
           style={{ backgroundColor: theme.bg1, border: `1px solid ${theme.bg1}` }}
