@@ -3,14 +3,14 @@ import { createRoot } from 'react-dom/client'
 import './index.css'
 import { ThemeProvider } from './context/ThemeContext'
 import Nav from './components/Nav'
-import Finder from './components/Finder'
+import Learn from './components/Learn'
 import Footer from './components/Footer'
 
 createRoot(document.getElementById('root')!).render(
   <StrictMode>
     <ThemeProvider>
-      <Nav current="Find" />
-      <Finder />
+      <Nav current="Learn" />
+      <Learn />
       <Footer />
     </ThemeProvider>
   </StrictMode>,

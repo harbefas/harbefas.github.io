@@ -1,4 +1,5 @@
 import { ThemeProvider } from './context/ThemeContext'
+import Nav from './components/Nav'
 import ScrollProgress from './components/ScrollProgress'
 import Hero from './components/Hero'
 import Manifesto from './components/Manifesto'
@@ -11,6 +12,7 @@ function App() {
   return (
     <ThemeProvider>
       <ScrollProgress />
+      <Nav />
       <div className="flex flex-col items-center">
         <Hero />
         <Manifesto />
