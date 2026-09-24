@@ -24,7 +24,9 @@ export default function ThemeToggle({ onThemeChange, currentTheme }: Props) {
       onClick={handleToggle}
       className="relative w-14 h-8 rounded-full transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-offset-2"
       style={{
-        backgroundColor: isDark ? 'var(--olive-bg)' : 'var(--cream-bg-2)',
+        // --olive-bg is the page background: the track needs a step away from it.
+        backgroundColor: 'var(--bg-3)',
+        border: '1px solid var(--border)',
         boxShadow: isAnimating ? `0 0 20px ${currentTheme.accent}60` : 'none',
       }}
       aria-label={`Switch to ${nextTheme.label}`}
