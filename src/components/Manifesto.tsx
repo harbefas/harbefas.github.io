@@ -65,6 +65,36 @@ export default function Manifesto() {
             </div>
           ))}
         </div>
+
+        <div className="mt-14 pt-10" style={{ borderTop: `1px solid ${theme.bg}` }}>
+          <h3 className="text-lg font-semibold mb-3" style={{ color: theme.accent }}>
+            Which licence, and why
+          </h3>
+
+          <p className="text-sm leading-relaxed mb-3" style={{ color: theme.operator }}>
+            Rented, in practice, means run as a service. A permissive licence allows exactly that:
+            take the code, close it, rent it back. The GPL stops the closed fork but not the
+            service, because a company that only ever runs the software never distributes it. The
+            AGPL closes that gap.
+          </p>
+
+          <p className="text-sm leading-relaxed mb-3" style={{ color: theme.operator }}>
+            So the rule here is what the software is shaped like, not a house style. Anything
+            someone could run as a service &mdash; Arbitus, Oikos, agent-memory &mdash; is
+            <strong style={{ color: theme.fg }}> AGPL-3.0</strong>. Anything you run on your own
+            machine is <strong style={{ color: theme.fg }}>GPL-3.0</strong>: nobody rents a desktop
+            chess client, and the risk there is a closed fork, which the GPL already answers.
+            Themes, colourschemes and design tokens stay <strong style={{ color: theme.fg }}>MIT</strong>,
+            because being copied everywhere is the entire point of them.
+          </p>
+
+          <p className="text-sm leading-relaxed" style={{ color: theme.comment }}>
+            This costs something, and pretending otherwise would be dishonest: the AGPL is banned
+            outright inside some companies, which narrows who is allowed to contribute. That is a
+            fair price on the projects where the alternative is watching the open version reappear
+            as somebody&rsquo;s paid tier.
+          </p>
+        </div>
       </div>
     </section>
   )
