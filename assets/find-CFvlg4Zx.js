@@ -1,4 +1,4 @@
-import{a as e,c as t,i as n,l as r,n as i,r as a,t as o}from"./Footer-DxKyf3A-.js";var s=r(),c=t(),l={generated:`2026-09-23T23:55:21-03:00`,issues:[{body:`Disclosure first: I develop a large-file text viewer myself (UwView / UwView Pro), and lnav appears in pages I have already published — a comparison page and a companion article about lnav and PilotEdit:
+import{a as e,c as t,i as n,l as r,n as i,r as a,t as o}from"./Footer-C5ZbOIP_.js";var s=r(),c=t(),l={generated:`2026-09-23T23:55:21-03:00`,issues:[{body:`Disclosure first: I develop a large-file text viewer myself (UwView / UwView Pro), and lnav appears in pages I have already published — a comparison page and a companion article about lnav and PilotEdit:
 
 - https://uvp.y42u.net/en/benchmarks-en/
 - https://uvp.y42u.net/en/blog/uvp-pilotedit-lnav-48gb-en/
