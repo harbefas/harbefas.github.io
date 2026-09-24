@@ -62,6 +62,7 @@ export const categories: Category[] = [
       {
         name: 'Gambito',
         repo: 'harbefas/gambito',
+        href: 'https://harbefas.github.io/gambito-site/',
         what: 'Keyboard-first Lichess client for tiling desktops: Rust daemon, Quickshell UI, Stockfish analysis, tournament broadcasts on the TV.',
         replaces: 'playing chess in a browser tab',
         stack: ['Rust', 'QML'],
