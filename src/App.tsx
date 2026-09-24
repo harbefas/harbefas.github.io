@@ -7,6 +7,7 @@ import Projects from './components/Projects'
 import Upstream from './components/Upstream'
 import LearnTeaser from './components/LearnTeaser'
 import Contribute from './components/Contribute'
+import Fund from './components/Fund'
 import Footer from './components/Footer'
 
 function App() {
@@ -21,6 +22,7 @@ function App() {
         <Upstream />
         <LearnTeaser />
         <Contribute />
+        <Fund />
         <Footer />
       </div>
     </ThemeProvider>
