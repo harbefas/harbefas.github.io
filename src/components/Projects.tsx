@@ -32,6 +32,12 @@ function ProjectCard({ project, theme }: { project: Project; theme: ThemeColors 
         </p>
       )}
 
+      {project.install && (
+        <p className="text-xs font-mono mb-4 break-all" style={{ color: theme.operator }}>
+          <span style={{ color: theme.accent }}>install</span> {project.install}
+        </p>
+      )}
+
       <div className="flex flex-wrap gap-2 mt-auto">
         {project.stack.map((s) => (
           <span

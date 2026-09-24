@@ -9,6 +9,8 @@ export interface Project {
   replaces: string
   stack: string[]
   status?: string
+  /** One line that gets it onto your machine. Only commands that work today. */
+  install?: string
 }
 
 export interface Category {
@@ -30,6 +32,7 @@ export const categories: Category[] = [
         what: 'RSS reader and podcast player that takes over the browser new tab. Local-first, keyboard-first, published on Firefox Add-ons.',
         replaces: 'the algorithmic feed',
         stack: ['JavaScript', 'GPL-3.0'],
+        install: 'addons.mozilla.org/firefox/addon/paperboy',
       },
       {
         name: 'paperboy-tui',
@@ -73,6 +76,7 @@ export const categories: Category[] = [
         what: 'Turns a phone into a keyboard, trackpad and media remote for a Wayland desktop over the browser. Nothing to install on either side.',
         replaces: 'a proprietary remote-control app',
         stack: ['Python', 'JavaScript', 'GPL-3.0'],
+        install: 'curl -fsSL https://raw.githubusercontent.com/harbefas/hyprpad/main/install.sh | bash',
       },
       {
         name: 'keybinds-tui',
@@ -80,6 +84,7 @@ export const categories: Category[] = [
         what: 'Looks up keybindings by parsing the eight real config sources, live Neovim included, so the reference cannot drift from the configs it documents.',
         replaces: 'a cheatsheet you forgot to update',
         stack: ['Rust', 'GPL-3.0'],
+        install: 'cargo install keybinds-tui',
       },
     ],
   },
@@ -95,6 +100,7 @@ export const categories: Category[] = [
         what: 'Security gateway for MCP tool calls: per-agent auth, allow and deny lists, schema validation, payload filtering, human approval for risky calls, audit log. A prompt rule does not constrain a tool-using agent; the boundary does.',
         replaces: 'vendor-side guardrails you cannot inspect',
         stack: ['Rust', 'AGPL-3.0'],
+        install: 'cargo install --locked --git https://github.com/harbefas/arbitus arbitus',
       },
       {
         name: 'Agent Code Buddy',
