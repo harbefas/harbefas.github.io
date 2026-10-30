@@ -2,6 +2,7 @@ import { useTheme } from '../context/ThemeContext'
 
 const LINKS = [
   { label: 'GitHub', href: 'https://github.com/harbefas' },
+  { label: 'Mastodon', href: 'https://mastodon.social/@nfvelten' },
   { label: 'Arbitus', href: 'https://arbitus-gateway.xyz' },
   { label: 'Mate Creations', href: 'https://harbefas.github.io/matecreations-site/' },
   { label: 'nicholas-velten.xyz', href: 'https://nicholas-velten.xyz' },
