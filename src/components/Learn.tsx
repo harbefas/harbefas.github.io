@@ -172,7 +172,7 @@ export default function Learn() {
 
         <div className="flex flex-col gap-16">
           {shelves.map((shelf) => (
-            <div key={shelf.id}>
+            <div key={shelf.id} id={shelf.id} className="scroll-mt-20">
               <h3 className="text-xl font-semibold mb-1" style={{ color: theme.fg }}>
                 {shelf.title}
               </h3>

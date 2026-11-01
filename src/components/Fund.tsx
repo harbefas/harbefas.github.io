@@ -6,7 +6,7 @@ import { useTheme } from '../context/ThemeContext'
 const PROMISES = [
   {
     title: 'A written report every month',
-    body: 'What was merged, upstream and here, and what it fixed. Published in the open, whether or not anyone sponsored that month.',
+    body: 'What was merged, upstream and here, and what it fixed — and what came in and where it went. Published in the open, whether or not anyone gave that month.',
   },
   {
     title: 'A first reply within seven days',
@@ -14,7 +14,7 @@ const PROMISES = [
   },
   {
     title: 'Nothing behind a login',
-    body: 'Sponsorship buys more of the work, never earlier access to it. No sponsor-only builds, no delayed releases, no feature held back.',
+    body: 'Giving buys more of the work, never earlier access to it, and never a say over it. No supporter-only builds, no delayed releases, no feature held back.',
   },
 ]
 
@@ -43,7 +43,7 @@ export default function Fund() {
         <p className="text-base leading-relaxed mb-8" style={{ color: theme.operator }}>
           So the work here is not only the projects listed above. It is the twenty patches merged
           into other people&rsquo;s repositories &mdash; rclone, Transmission, Lichess, raylib,
-          lnav &mdash; and the triage behind them. Sponsorship buys more hours of exactly that.
+          lnav &mdash; and the triage behind them. Funding buys more hours of exactly that.
         </p>
 
         <div
@@ -58,8 +58,8 @@ export default function Fund() {
           </p>
           <p className="text-sm leading-relaxed" style={{ color: theme.comment }}>
             That is one working day a week bought back from paid employment and spent here. Not a
-            salary, not a goal that needs thousands of strangers &mdash; one company that depends
-            on this code, or a handful of people who use it.
+            salary, not a goal that needs thousands of strangers &mdash; a handful of the people who
+            use it, each giving a little. Not a company buying influence over a commons.
           </p>
         </div>
 
@@ -82,16 +82,27 @@ export default function Fund() {
 
         <div className="flex flex-wrap gap-4 items-center">
           <a
-            href="https://github.com/sponsors/nfvelten"
+            href="https://liberapay.com/harbefas"
             target="_blank"
             rel="noopener noreferrer"
             className="px-5 py-2.5 rounded-lg text-sm font-medium transition-all duration-200 hover:scale-105 hover:shadow-lg"
             style={{ backgroundColor: theme.accent, color: theme.bg, boxShadow: `0 4px 20px ${theme.accent}40` }}
           >
-            Sponsor on GitHub
+            Give on Liberapay
           </a>
           <span className="text-sm" style={{ color: theme.comment }}>
-            Company sponsorship, and what comes with it, is set up on the same page.
+            Liberapay is a non-profit run by its own contributors and takes no cut. Already on
+            GitHub?{' '}
+            <a
+              href="https://github.com/sponsors/nfvelten"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="underline underline-offset-2"
+              style={{ color: theme.function }}
+            >
+              Sponsors works too
+            </a>
+            .
           </span>
         </div>
       </div>

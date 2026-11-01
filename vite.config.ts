@@ -12,6 +12,8 @@ export default defineConfig({
         main: resolve(__dirname, 'index.html'),
         find: resolve(__dirname, 'find/index.html'),
         learn: resolve(__dirname, 'learn/index.html'),
+        futuro: resolve(__dirname, 'futuro/index.html'),
+        future: resolve(__dirname, 'future/index.html'),
       },
     },
   },
