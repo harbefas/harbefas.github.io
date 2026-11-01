@@ -82,7 +82,7 @@ export default function Fund() {
 
         <div className="flex flex-wrap gap-4 items-center">
           <a
-            href="https://liberapay.com/harbefas"
+            href="https://liberapay.com/nfvelten/"
             target="_blank"
             rel="noopener noreferrer"
             className="px-5 py-2.5 rounded-lg text-sm font-medium transition-all duration-200 hover:scale-105 hover:shadow-lg"
