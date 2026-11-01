@@ -10,6 +10,13 @@
 @import '@fontsource/jetbrains-mono/400.css';
 @import '@fontsource/jetbrains-mono/500.css';
 
+/* Harbefas red over the vendored mate amber, for fills only (the ink is in
+   src/theme/colors.ts). Kept here so `sync:tokens` never overwrites it. */
+[data-theme="dark"],
+[data-theme="light"] {
+  --accent: #e8251f;
+}
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;

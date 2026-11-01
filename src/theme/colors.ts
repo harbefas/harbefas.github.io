@@ -30,8 +30,15 @@ export interface ThemeColors {
  *    as muted UI ink, where --border would fail 1.4.3.
  *  - `accent` is --accent-text (ink), not --accent (fill): it is used as a text
  *    and rule color, and amber fill is 2.83 on Tererê's cream.
+ *
+ * One override on top of the vendored palette: Harbefas's accent is red, not
+ * mate amber. Pure red (#e8251f) is 3.2 on the olive background, so the ink
+ * here is the lightest red that clears 4.5 on both --bg and --bg-2; the pure
+ * fill only goes where no small text sits on it (--accent in index.css).
  */
-const map = (t: typeof dark | typeof light, name: string, label: string): ThemeColors => ({
+const RED = { dark: '#ff7b6e', light: '#b3191f' }
+
+const map = (t: typeof dark | typeof light, name: string, label: string, accent: string): ThemeColors => ({
   name,
   label,
   bg: t['--bg'],
@@ -44,10 +51,10 @@ const map = (t: typeof dark | typeof light, name: string, label: string): ThemeC
   comment: t['--tx-3'],
   number: t['--orange'],
   operator: t['--tx-2'],
-  accent: t['--accent-text'],
+  accent,
 })
 
-export const yerbaMate: ThemeColors = map(dark, 'yerba-mate', 'Yerba Mate')
-export const terere: ThemeColors = map(light, 'terere', 'Terere')
+export const yerbaMate: ThemeColors = map(dark, 'yerba-mate', 'Yerba Mate', RED.dark)
+export const terere: ThemeColors = map(light, 'terere', 'Terere', RED.light)
 
 export const themes = [yerbaMate, terere]
